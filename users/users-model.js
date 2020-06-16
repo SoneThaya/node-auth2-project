@@ -18,7 +18,7 @@ function findBy(filter) {
     // join roles as r on u.role = r.id
     return db("users as u")
         // .join("roles as r", "u.role", "r.id")
-        .select("u.id", "u.username", "u.department")
+        //.select("u.id", "u.username", "u.department")
         .where(filter)
         .orderBy("u.id");
 }
